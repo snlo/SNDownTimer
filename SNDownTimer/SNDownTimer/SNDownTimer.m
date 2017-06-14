@@ -103,10 +103,15 @@ typedef void(^CompletBlock)(void);
     } return _formatter;
 }
 
-+ (void)downTimerIntervalBlock:(void(^)(void))intervalBlock
++ (void)downTimerInterval:(NSTimeInterval)interval intervalBlock:(void(^)(void))intervalBlock
 {
-    [SNSharedDownTimer downTimerIntervalBlock:intervalBlock];
-    
+    [SNSharedDownTimer downTimerInterval:interval intervalBlock:intervalBlock];
+}
+
+- (void)invalidate {
+    if (self.timer) {
+        _tempTime = _timeFrame - _interval;
+    }
 }
 
 @end
@@ -130,6 +135,8 @@ typedef void(^ShardIntervalBlock)(void);
 @property (nonatomic, strong) NSDateFormatter * formatter;
 
 @property (nonatomic, copy) ShardIntervalBlock intervalBlock;
+
+@property (nonatomic, assign) NSTimeInterval interval;
 
 @end
 
@@ -156,12 +163,16 @@ static id _singletion;
 }
 
 
-+ (void)downTimerIntervalBlock:(void(^)(void))intervalBlock
++ (void)downTimerInterval:(NSTimeInterval)interval intervalBlock:(void(^)(void))intervalBlock
 {
+    [SNSharedDownTimer sharedManeger].interval = interval;
     [[SNSharedDownTimer sharedManeger] timer];
     if (intervalBlock) [SNSharedDownTimer sharedManeger].intervalBlock = intervalBlock;
 }
-
++ (void)invalidate {
+    [[SNSharedDownTimer sharedManeger].timer invalidate];
+    [SNSharedDownTimer sharedManeger].timer = nil;
+}
 
 - (void)shardActionTimer:(NSTimer *)timer {
     if ([SNSharedDownTimer sharedManeger].intervalBlock) {
@@ -171,7 +182,7 @@ static id _singletion;
 
 - (NSTimer *)timer {
     if (!_timer) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(shardActionTimer:) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:[SNSharedDownTimer sharedManeger].interval target:self selector:@selector(shardActionTimer:) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     } return _timer;
 }

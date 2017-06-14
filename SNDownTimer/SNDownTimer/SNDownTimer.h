@@ -10,6 +10,8 @@
 
 @interface SNDownTimer : NSObject
 
+@property (nonatomic, readonly) NSTimer * timer;
+
 /**
  自定义间歇回调
 
@@ -28,11 +30,17 @@
                      intervalBlock:(void(^)(NSTimeInterval afterSeconds, NSString *showTimeString))intervalBlock
                       completBlock:(void(^)(void))completBlock;
 /**
- 默认每秒间歇回调
+ 默认间歇回调（使用的是全局化的timer）
  
+ @param interval 间歇时间
  @param intervalBlock 间歇回调
  */
-+ (void)downTimerIntervalBlock:(void(^)(void))intervalBlock;
++ (void)downTimerInterval:(NSTimeInterval)interval intervalBlock:(void(^)(void))intervalBlock;
+
+/**
+ 使timer作废，并通知倒计时结束
+ */
+- (void)invalidate;
 
 @end
 
@@ -43,11 +51,19 @@
 
 + (instancetype)sharedManeger;
 
-/**
- 默认每秒间歇回调
+@property (nonatomic, readonly) NSTimer * timer;
 
+/**
+ 默认间歇回调
+
+ @param interval 间歇时间
  @param intervalBlock 间歇回调
  */
-+ (void)downTimerIntervalBlock:(void(^)(void))intervalBlock;
++ (void)downTimerInterval:(NSTimeInterval)interval intervalBlock:(void(^)(void))intervalBlock;
+
+/**
+ 使timer作废，并清理内存
+ */
++ (void)invalidate;
 
 @end
