@@ -3,7 +3,7 @@
 
 ## Usage
 
-使用及其简单，导入SNDownTimer.h
+CocoaPods：pod 'SNDownTimer'
 
 倒计时定时器：
 
