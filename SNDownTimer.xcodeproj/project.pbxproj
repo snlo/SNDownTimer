@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EB004C420A2092E003E8AF8 /* Testxxxxxxxx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB004C320A2092E003E8AF8 /* Testxxxxxxxx.m */; };
 		B3A2E4DE1E5EBCBA005459E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2E4DD1E5EBCBA005459E9 /* main.m */; };
 		B3A2E4E11E5EBCBA005459E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2E4E01E5EBCBA005459E9 /* AppDelegate.m */; };
 		B3A2E4E41E5EBCBA005459E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2E4E31E5EBCBA005459E9 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EB004C220A2092E003E8AF8 /* Testxxxxxxxx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Testxxxxxxxx.h; sourceTree = "<group>"; };
+		5EB004C320A2092E003E8AF8 /* Testxxxxxxxx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Testxxxxxxxx.m; sourceTree = "<group>"; };
 		B3A2E4D91E5EBCBA005459E9 /* SNDownTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNDownTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A2E4DD1E5EBCBA005459E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3A2E4DF1E5EBCBA005459E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				B3A2E5101E5EBCD3005459E9 /* SNDownTimer.h */,
 				B3A2E5111E5EBCD3005459E9 /* SNDownTimer.m */,
+				5EB004C220A2092E003E8AF8 /* Testxxxxxxxx.h */,
+				5EB004C320A2092E003E8AF8 /* Testxxxxxxxx.m */,
 			);
 			path = SNDownTimer;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A2E4E41E5EBCBA005459E9 /* ViewController.m in Sources */,
+				5EB004C420A2092E003E8AF8 /* Testxxxxxxxx.m in Sources */,
 				B3A2E4E11E5EBCBA005459E9 /* AppDelegate.m in Sources */,
 				B3A2E5121E5EBCD3005459E9 /* SNDownTimer.m in Sources */,
 				B3A2E4DE1E5EBCBA005459E9 /* main.m in Sources */,
@@ -523,6 +529,7 @@
 				B3A2E5081E5EBCBB005459E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3A2E5091E5EBCBB005459E9 /* Build configuration list for PBXNativeTarget "SNDownTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +538,7 @@
 				B3A2E50B1E5EBCBB005459E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3A2E50C1E5EBCBB005459E9 /* Build configuration list for PBXNativeTarget "SNDownTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +547,7 @@
 				B3A2E50E1E5EBCBB005459E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
