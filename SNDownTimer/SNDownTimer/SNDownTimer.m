@@ -2,8 +2,8 @@
 //  SNDownTimer.m
 //  Ljiamm
 //
-//  Created by sunDong on 16/12/9.
-//  Copyright © 2016年 sunDong. All rights reserved.
+//  Created by snlo on 16/12/9.
+//  Copyright © 2016年 snlo. All rights reserved.
 //
 
 #import "SNDownTimer.h"
