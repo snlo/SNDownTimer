@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+//	pod trunk push SNDownTimer.podspec --verbose --allow-warnings --use-libraries
+	
     __block SNDownTimer * timer =
     [SNDownTimer downTimerWithFrame:60 interval:1 formatter:@"SS" startBlock:^{
         //第0秒
