@@ -22,9 +22,9 @@
 //	pod trunk push SNDownTimer.podspec --verbose --allow-warnings --use-libraries
 	
     __block SNDownTimer * timer =
-    [SNDownTimer downTimerWithFrame:60 interval:1 formatter:@"SS" startBlock:^{
+    [SNDownTimer downTimerWithFrame:60 interval:1 formatter:@"SS" startBlock:^(NSString *showTimeString){
         //第0秒
-        NSLog(@"start");
+        NSLog(@"start - %@",showTimeString);
     } intervalBlock:^(NSTimeInterval afterSeconds, NSString *showTimeString) {
         
         if (afterSeconds == 11) {
