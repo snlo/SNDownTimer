@@ -124,7 +124,6 @@ typedef void(^CompletBlock)(void);
 
 
 
-
 typedef void(^ShardIntervalBlock)(void);
 
 @interface SNSharedDownTimer ()
