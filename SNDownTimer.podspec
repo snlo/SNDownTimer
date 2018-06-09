@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SNDownTimer"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "A short description of SNDownTimer."
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   Witty timer
                    DESC
 
-  s.homepage     = "https://github.com/FMMI/SNDownTimer"
+  s.homepage     = "https://github.com/snlo/SNDownTimer"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/FMMI/SNDownTimer.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/snlo/SNDownTimer.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
